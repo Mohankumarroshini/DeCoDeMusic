@@ -255,8 +255,8 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🚨 Support", url="t.me/decodesupport"),
-                    InlineKeyboardButton("📡 Updates", url="t.me/DeeCodebots"),
+                    InlineKeyboardButton("🚨 Support", url="t.me/Mastro_support"),
+                    InlineKeyboardButton("📡 Updates", url="t.me/mastro_updates"),
                 ],
                 [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
             ]
@@ -293,8 +293,8 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("🚨 Support", url="t.me/decodesupport"),
-                        InlineKeyboardButton("📡 Updates", url="t.me/DeeCodebots"),
+                        InlineKeyboardButton("🚨 Support", url="t.me/mastro_support"),
+                        InlineKeyboardButton("📡 Updates", url="t.me/mastro_updates"),
                     ],
                     [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
                 ]
@@ -309,7 +309,7 @@ async def play(_, message: Message):
                 [[InlineKeyboardButton(text="YouTube 🎬", url="https://youtube.com")]]
             )
 
-        if (dur / 60) > DURATION_LIMIT:
+        if (dur / 120) > DURATION_LIMIT:
             await lel.edit(
                 f"❌ Videos longer than {DURATION_LIMIT} minutes aren't allowed to play!"
             )
@@ -320,7 +320,7 @@ async def play(_, message: Message):
     else:
         if len(message.command) < 2:
             return await lel.edit(
-                "🧐 **Song not found! Try searching with the correct title\nExample » /play In The End\n\nChannel : @DeCodeMusicBot**"
+                "🧐 **Song not found! Try searching with the correct title\nExample » /play In The End\n\nChannel : @Mastro_Support**"
             )
         await lel.edit("🔎 **Finding the song...**")
         query = message.text.split(None, 1)[1]
@@ -356,14 +356,14 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🚨 Support", url="t.me/decodesupport"),
-                    InlineKeyboardButton("📡 Updates", url="t.me/DeeCodebots"),
+                    InlineKeyboardButton("🚨 Support", url="t.me/Mastro_support"),
+                    InlineKeyboardButton("📡 Updates", url="t.me/Mastro_updates"),
                 ],
                 [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
             ]
         )
 
-        if (dur / 60) > DURATION_LIMIT:
+        if (dur / 120) > DURATION_LIMIT:
             await lel.edit(
                 f"❌ Videos longer than {DURATION_LIMIT} minutes aren't allowed to play!"
             )
